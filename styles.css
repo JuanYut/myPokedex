@@ -8,7 +8,6 @@ body {
 }
 
 .container {
-  /* background-color: rebeccapurple; */
   border: solid 2px white;
   border-radius: 5px;
   margin: 0;
@@ -39,14 +38,18 @@ body {
   height: 200px;
   margin: 20px;
   border-radius: 5px;
-  box-shadow: 0 10px 5px -10px #000;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.card:hover {
+.card-list {
+  box-shadow: 0 10px 5px -10px #000;
+  cursor: pointer;
+}
+
+.card-list:hover {
   animation: boop 0.5s linear;
 }
 
@@ -72,5 +75,53 @@ body {
   }
   80% {
     transform: translateY(0px);
+  }
+}
+
+/* MODAL --------------------------------------------------------------- */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  opacity: 0.95;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#closeModal {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.modal-card {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+.modal-card-image {
+  width: 400px;
+}
+
+.modal-card-title {
+  font-size: 3em;
+}
+
+.modal-card-description {
+  font-size: 2em;
+}
+
+/* Media Queries ------------------------------------------------------- */
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 100%;
   }
 }
