@@ -7,17 +7,31 @@
     <title>My Pokedex</title>
     <link rel="stylesheet" href="styles.css" />
     <link
-      href="https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap"
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
       rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
     />
   </head>
   <body>
     <div class="container">
-      <h1 class="app-title">P o k e d e x</h1>
+      <img class="image-title" src="https://bit.ly/3baf486" alt="" />
+      <p class="app-title">By: @juan_yut</p>
+      <div class="app-submenus">
+        <div class="search-container">
+          <i class="fas fa-search"></i>
+          <input
+            class="app-search"
+            type="text"
+            placeholder="Filter Pokemon"
+            id="app-search"
+          />
+        </div>
+      </div>
       <ol class="pokedex" id="pokedex"></ol>
     </div>
     <script src="index.js"></script>

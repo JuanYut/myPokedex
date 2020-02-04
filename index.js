@@ -1,5 +1,6 @@
 // * HTML Elements
 const pokedex = document.getElementById('pokedex');
+const appSearch = document.getElementById('app-search');
 
 // * For save the last pokemon data
 const pokeCache = [];
@@ -84,6 +85,23 @@ const closeModal = () => {
   const modal = document.getElementById('modal');
   modal.parentElement.removeChild(modal);
 };
+
+// * Search a Pokemon
+appSearch.addEventListener('keyup', e => {
+  const term = e.target.value.toLowerCase();
+  const allPokemons = pokedex.getElementsByTagName('li');
+  Array.from(allPokemons).forEach(thePokemon => {
+    let thePokemonName = thePokemon.innerText.split(' ')[1].toLocaleLowerCase();
+    // console.log(thePokemonName);
+    if (thePokemonName.indexOf(term) !== -1) {
+      // flex
+      thePokemon.style.display = 'flex';
+    } else {
+      // none
+      thePokemon.style.display = 'none';
+    }
+  });
+});
 
 // * Call my main function
 fetchPokemon();
