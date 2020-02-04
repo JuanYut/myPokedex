@@ -13,11 +13,18 @@ body {
   margin: 0;
   padding: 0;
   width: 50%;
+  text-align: center;
+}
+
+.image-title {
+  width: 15em;
+  margin: 10px 0 0 0;
 }
 
 .app-title {
   text-align: center;
-  font-family: 'Luckiest Guy', cursive;
+  margin-top: 0;
+  font-size: 0.7em;
 }
 
 .pokedex {
@@ -117,6 +124,35 @@ body {
 
 .modal-card-description {
   font-size: 2em;
+}
+
+/* SubMenu ------------------------------------------------------------- */
+.app-submenus {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Input Search -------------------------------------------------------- */
+.search-container {
+  background-color: white;
+  width: 14em;
+  height: 33px;
+  border-radius: 4px;
+}
+
+.search-container i {
+  color: grey;
+}
+
+.app-search {
+  outline: 0;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 8px;
+  box-sizing: border-box;
+  font-size: 14px;
 }
 
 /* Media Queries ------------------------------------------------------- */
